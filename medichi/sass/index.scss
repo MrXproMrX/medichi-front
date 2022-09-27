@@ -1,7 +1,6 @@
 @import './files/color';
 @import './files/fonts';
 @import './files/mixins';
-@import '_animation';
 
 
 body{
@@ -19,7 +18,7 @@ body{
 // animation start
 
 .animation{
-    background-color:#002853e8;
+    background-color:rgb(1, 47, 97, 97%);;
     position: fixed;
     top: 0;
     left: 0;
@@ -476,6 +475,13 @@ body{
         text-align: center;
         padding: 0 10px;
         margin-bottom: 10px;
+        display: flex;
+        align-items:center;
+        justify-content: center;
+        grid-gap: 5px;
+        span{
+            display: none;
+        }
     }
 
     &__menu{
@@ -530,8 +536,8 @@ body{
         margin: 25px 0;
         text-align: justify;
 
-        max-height: 290px;
-        -webkit-line-clamp: 10;
+        // max-height: 290px;
+        // -webkit-line-clamp: 10;
         position: relative;
         display: -webkit-box;
         -webkit-box-orient: vertical;
@@ -1383,6 +1389,7 @@ body{
 
     .about__text {
         max-height: 250px;
+        -webkit-line-clamp: 10;
     }
 
     .gallYou__text{
@@ -1854,7 +1861,6 @@ body{
     }
 }
 
-
 @media (max-width:550px){
     .services__item, .news__item {
         flex: 0 0 100%;
@@ -1947,9 +1953,44 @@ body{
     .reviews__img img {
         width: auto;
     }
+
+    .doctors__item {
+        margin: 10px 0;
+    }
+
+    .services__item{
+        min-height: auto;
+    }
+
+    .services__menu{
+        overflow: hidden;
+        height: 0;
+        width: 0;
+        padding: 0;
+        outline: 0;
+    }
+
+    .services__title__h3 span {
+       display: block;
+    }
+
+    .services__item__active .services__title__h3 span{
+        transform: rotate(90deg);
+        -webkit-transform: rotate(90deg);
+        -moz-transform: rotate(90deg);
+        -ms-transform: rotate(90deg);
+        -o-transform: rotate(90deg);
+    }
+
+    .services__item__active .services__menu{
+        display: flex;
+        padding-top: 15px;
+        padding-bottom: 25px;
+        width: 100%;
+        height: auto;
+        outline: 1;
+    }
 }
-
-
 
 @media (max-width:480px){
     .numbers__title__h2 {

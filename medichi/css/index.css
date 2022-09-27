@@ -69,116 +69,6 @@ label {
   cursor: pointer;
 }
 
-.lds-roller {
-  display: inline-block;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 80px;
-  height: 80px;
-  transform: translate(-50%, -50%);
-  -webkit-transform: translate(-50%, -50%);
-  -moz-transform: translate(-50%, -50%);
-  -ms-transform: translate(-50%, -50%);
-  -o-transform: translate(-50%, -50%);
-}
-
-.lds-roller div {
-  animation: lds-roller 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-  transform-origin: 40px 40px;
-}
-
-.lds-roller div:after {
-  content: " ";
-  display: block;
-  position: absolute;
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: #fff;
-  margin: -4px 0 0 -4px;
-}
-
-.lds-roller div:nth-child(1) {
-  animation-delay: -0.036s;
-}
-
-.lds-roller div:nth-child(1):after {
-  top: 63px;
-  left: 63px;
-}
-
-.lds-roller div:nth-child(2) {
-  animation-delay: -0.072s;
-}
-
-.lds-roller div:nth-child(2):after {
-  top: 68px;
-  left: 56px;
-}
-
-.lds-roller div:nth-child(3) {
-  animation-delay: -0.108s;
-}
-
-.lds-roller div:nth-child(3):after {
-  top: 71px;
-  left: 48px;
-}
-
-.lds-roller div:nth-child(4) {
-  animation-delay: -0.144s;
-}
-
-.lds-roller div:nth-child(4):after {
-  top: 72px;
-  left: 40px;
-}
-
-.lds-roller div:nth-child(5) {
-  animation-delay: -0.18s;
-}
-
-.lds-roller div:nth-child(5):after {
-  top: 71px;
-  left: 32px;
-}
-
-.lds-roller div:nth-child(6) {
-  animation-delay: -0.216s;
-}
-
-.lds-roller div:nth-child(6):after {
-  top: 68px;
-  left: 24px;
-}
-
-.lds-roller div:nth-child(7) {
-  animation-delay: -0.252s;
-}
-
-.lds-roller div:nth-child(7):after {
-  top: 63px;
-  left: 17px;
-}
-
-.lds-roller div:nth-child(8) {
-  animation-delay: -0.288s;
-}
-
-.lds-roller div:nth-child(8):after {
-  top: 56px;
-  left: 12px;
-}
-
-@keyframes lds-roller {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
 body {
   font-family: "Gotham Pro", sans-serif;
   box-sizing: border-box;
@@ -190,7 +80,7 @@ body {
 }
 
 .animation {
-  background-color: rgba(0, 40, 83, 0.9098039216);
+  background-color: rgba(1, 47, 97, 0.97);
   position: fixed;
   top: 0;
   left: 0;
@@ -604,6 +494,13 @@ body {
   text-align: center;
   padding: 0 10px;
   margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  grid-gap: 5px;
+}
+.services__title__h3 span {
+  display: none;
 }
 .services__menu {
   padding-top: 15px;
@@ -655,8 +552,6 @@ body {
   line-height: 180%;
   margin: 25px 0;
   text-align: justify;
-  max-height: 290px;
-  -webkit-line-clamp: 10;
   position: relative;
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -1442,6 +1337,7 @@ body {
   }
   .about__text {
     max-height: 250px;
+    -webkit-line-clamp: 10;
   }
   .gallYou__text {
     margin-bottom: 15px;
@@ -1889,6 +1785,37 @@ body {
   }
   .reviews__img img {
     width: auto;
+  }
+  .doctors__item {
+    margin: 10px 0;
+  }
+  .services__item {
+    min-height: auto;
+  }
+  .services__menu {
+    overflow: hidden;
+    height: 0;
+    width: 0;
+    padding: 0;
+    outline: 0;
+  }
+  .services__title__h3 span {
+    display: block;
+  }
+  .services__item__active .services__title__h3 span {
+    transform: rotate(90deg);
+    -webkit-transform: rotate(90deg);
+    -moz-transform: rotate(90deg);
+    -ms-transform: rotate(90deg);
+    -o-transform: rotate(90deg);
+  }
+  .services__item__active .services__menu {
+    display: flex;
+    padding-top: 15px;
+    padding-bottom: 25px;
+    width: 100%;
+    height: auto;
+    outline: 1;
   }
 }
 @media (max-width: 480px) {

@@ -27,6 +27,32 @@ $(document).ready(function(){
 })
 
 
+// ACARDION start
+
+const titles = document.querySelectorAll('.services__label');
+const items = document.querySelectorAll('.services__item');
+
+titles.forEach(label => {
+  label.addEventListener('click', (e) => {
+    const cleackedTitles = e.currentTarget;
+    const element = cleackedTitles.parentNode;
+    if (element.classList.contains('services__item__active')) {
+      element.classList.remove('services__item__active');
+    } else {
+      items.forEach(element => {
+        if (element.classList.contains('services__item__active')) {
+          element.classList.remove('services__item__active');
+        }
+      });
+      element.classList.add('services__item__active');
+    }
+  });
+})
+
+
+// ACARDION start
+
+
 $(document).ready(function(){
   (function($){
     $('.numbers__max').each(function(){
