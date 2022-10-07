@@ -1,0 +1,22 @@
+
+// hospital start
+
+.hospital{
+    position: relative;
+    margin-bottom: 100px;
+}
+
+// hospital end
+
+@media (max-width:1000px){
+    .hospital .about_contint__text img{
+        width: 100%;
+        float: inherit;
+        margin-right: 0;
+    }
+
+    .hospital .about_contint__text img + img{
+        float: inherit;
+        margin-left: 0;
+    }
+}

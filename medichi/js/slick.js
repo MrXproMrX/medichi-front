@@ -1,41 +1,31 @@
 $(document).ready(function(){
-  $('.doctors__list').slick({
-    dots: true,
-    arrows:false,
-    infinite: false,
-    autoplaySpeed:3000,
-    speed: 1000,
-    autoplay:true,
-    slidesToShow: 4, 
-    slidesToScroll: 1,
-    responsive: [
-      {
-        breakpoint: 1210,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 950,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1
-        }
-      },
-      {
-        breakpoint: 565,
-        settings: {
-          slidesToShow: 1,
-          dots: true,
-          slidesToScroll: 1
-        }
-      }
-    ]
-  });
+  $('.owl-carousel').owlCarousel({
+    loop:false,
+    margin:10,
+    data:true,
+    nav:false,
+    responsive:{
+        0:{
+          items:1
+        },
+
+        650:{
+          items:1
+        },
+
+        700:{
+          items:2
+        },
   
+        950:{
+          items:3
+        },
+  
+        1220:{
+          items:4
+        }
+    }
+  });
 
   $('.slider__list').slick({
     dots: true,
@@ -46,7 +36,6 @@ $(document).ready(function(){
     autoplay:true,
     fade: true,
   });
-  
   
   $('.reviews__list').slick({
       dots: true,
@@ -69,5 +58,5 @@ $(document).ready(function(){
         },
       ]
   });
-  });
-  
+
+});  
