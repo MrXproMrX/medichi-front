@@ -1,0 +1,166 @@
+
+// doctorsM start
+
+.doctorsM{
+    position: relative;
+    margin-bottom: 100px;
+
+    .contactsIn__link{
+        margin-top: 30px;
+    }
+
+    &__img{
+        float: left;
+        margin-right: 60px;
+    }
+
+    &__title__h2{
+        @include fontAll(40px,400,$title);
+        text-transform: uppercase;
+        line-height: 110%;
+        margin-bottom: 10px;
+    }
+
+    &__list{
+        margin-top: 40px;
+    }
+
+    &__title__h4{
+        @include fontAll(16px,400,$max);
+    }
+
+    &__title__h3{
+        @include fontAll(24px,700,$title);
+        line-height: 100%;
+        margin-bottom: 25px;
+    }
+
+    &__menu{
+        display: flex;
+        align-items: center;
+        grid-gap: 10px;
+        flex-wrap: wrap;
+        margin-bottom: 22px;
+        .doctorsM__menu__link + .doctorsM__menu__link{
+            padding-left: 12px;
+            &::after{
+                content: "";
+                display: block;
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 2px;
+                height: 100%;
+                background-color:$title;
+                transform: rotate(25deg);
+                -webkit-transform: rotate(25deg);
+                -moz-transform: rotate(25deg);
+                -ms-transform: rotate(25deg);
+                -o-transform: rotate(25deg);
+            }
+        }
+    }
+
+    &__menu__link{
+        @include fontAll(18px,700,$title);
+        line-height: 100%;
+        position: relative;
+    }
+
+    &__title__h5{
+        @include fontAll(18px,400,$text);
+        line-height: 120%;
+    }
+
+    &__text{
+        @include fontAll(16px,400,$text);
+        line-height: 180%;
+        text-align: justify;
+    }
+
+    &__img{
+        @include fiximg(400px,400px,true);
+        img{
+            object-position: top center;
+        }
+    }
+}
+
+// doctorsM end
+
+@media (max-width:1200px){
+    .doctorsM__img{
+        margin-right: 30px;
+    }
+
+    .doctorsM__img {
+        width: 300px;
+        height: 300px;
+    }
+
+    .doctorsM__text {
+        font-size: 14px;
+    }
+
+    .doctorsM__title__h5,
+    .doctorsM__menu__link{
+        font-size: 16px;
+    }
+
+    .doctorsM__title__h2 {
+        font-size: 32px;
+    }
+
+    .doctorsM__list {
+        margin-top: 20px;
+    }
+}
+
+@media (max-width:1000px){
+    .doctorsM__title__h2 {
+        font-size: 30px;
+    }
+
+    .doctorsM__title__h4{
+        font-size: 14px;
+    }
+}
+
+
+@media (max-width:800px){
+    .doctorsM__title__h2 {
+        font-size: 26px;
+    }
+}
+
+@media (max-width:650px){
+    .doctorsM__img{
+        float: inherit;
+        max-width: 300px;
+        margin: 0 auto;
+        margin-bottom: 20px;
+    }
+
+    .doctorsM__title__h3{
+        font-size: 20px;
+        margin-bottom: 15px;
+    }
+
+    .doctorsM__title__h5,
+    .doctorsM__menu__link{
+        font-size: 14px;
+    }
+    
+    .doctorsM__title__h2 {
+        font-size: 22px;
+    }
+}
+
+@media (max-width:420px){
+    .doctorsM__img{
+        max-width: inherit;
+        width: 100%;
+        height: auto;
+        margin-bottom: 20px;
+    }
+}

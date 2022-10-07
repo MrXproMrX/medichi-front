@@ -1,0 +1,211 @@
+
+// about_in start
+
+.about_in{ 
+    position: relative;
+    padding: 100px 0;
+    background-position: top center !important;
+    background-repeat: no-repeat !important;
+    background-size: cover !important;
+    margin-bottom: 100px;
+
+    &__title__h2{
+        @include fontAll(40px,400,#fff);
+        text-align: center;
+        line-height: 115%;
+        margin-bottom: 15px;
+    }
+
+    &__list__menu{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        grid-gap: 20px;
+        flex-wrap: wrap;
+
+        li{
+            position: relative;
+        }
+
+        li+li{
+            .about_in__link__menu{
+                padding-left: 30px;
+                &::after{
+                    display: block;
+                    content: "";
+                    width: 10px;
+                    height: 2px;
+                    background-color: #fff;
+                    position: absolute;
+                    top: 50%;
+                    left: 0;
+                    transform: translate(0,-50%);
+                    -webkit-transform: translate(0,-50%);
+                    -moz-transform: translate(0,-50%);
+                    -ms-transform: translate(0,-50%);
+                    -o-transform: translate(0,-50%);
+                }
+            }
+        }
+    }
+
+    &__link__menu{
+        @include fontAll(20px,400,#fff);
+        text-align: center;
+        line-height: 150%;
+        position: relative;
+    }
+}
+
+// about_in end
+
+// about_contint start
+
+.about_contint{
+    position: relative;
+    margin-bottom: 100px;
+
+    .about__item__img{
+        padding-top: 10px;
+    }
+
+    &__text{
+        @include fontAll(16px,400,$text);
+        line-height: 180%;
+        margin: 25px 0;
+        text-align: justify;
+        a{
+            font-weight: 500;
+        }
+
+        img{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            float: left;
+            margin-right: 20px;
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+            object-position: center center;
+            max-height: 400px;
+        }
+
+        img+img{
+            margin-top: 20px;
+            margin-bottom: 20px;
+            margin-right: 0px;
+            float: right;
+            margin-left: 20px;
+        }
+    }
+}
+
+// about_contint end
+
+// about_video start
+
+.about_video{
+    position: relative;
+    margin-bottom: 100px;
+    &__video{
+        position: relative;
+        @include fiximg(650px,400px,true);
+        float: left;
+        margin-right: 60px;
+        margin-bottom: 10px;
+    }
+
+    &__img__play{
+        width: 16px !important;
+        height: 16px !important;
+        object-fit: cover !important;
+        object-position: center !important;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        -webkit-transform: translate(-50%,-50%);
+        -moz-transform: translate(-50%,-50%);
+        -ms-transform: translate(-50%,-50%);
+        -o-transform: translate(-50%,-50%);
+    }
+}
+
+// about_video end
+
+
+@media (max-width:1200px){
+    .about_video__video{
+        margin-right: 30px;
+    }
+
+    .about_in__title__h2 {
+        font-size: 32px;
+    }
+
+    .about_in {
+        padding: 70px 0;
+    }
+
+    .about_in__link__menu{
+        font-size: 18px;
+    }
+}
+
+@media (max-width:1000px){
+    .about_video__video{
+        margin-right: 0px;
+        width: 100%;
+        height: auto;
+    }
+
+    .about_in__link__menu{
+        font-size: 16px;
+    }
+
+    .about_contint__text img{
+        width: 100%;
+        float: inherit;
+        margin-right: 0;
+    }
+
+    .about_contint__text img + img{
+        float: inherit;
+        margin-left: 0;
+    }
+}
+
+@media (max-width:800px){
+    .about_contint__text,
+    .about_contint__text{
+        font-size: 14px;
+    }
+
+    .about_in__title__h2 {
+        font-size: 30px;
+    }
+}
+
+@media (max-width:650px){
+    .about_in {
+        padding: 50px 0;
+    }
+}
+
+@media (max-width:550px){
+    .about_in__title__h2 {
+        font-size: 26px;
+    }
+
+    .about_in__link__menu{
+        font-size: 14px;
+    }
+
+    .about_in__list__menu li + li .about_in__link__menu {
+        padding-left: 20px;
+    }
+
+    .about_in__list__menu {
+        grid-gap: 10px;
+    }
+}
